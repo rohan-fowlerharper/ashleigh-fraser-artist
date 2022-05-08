@@ -1,13 +1,47 @@
+import { Link } from "@remix-run/react";
+import SectionHeading from "~/components/SectionHeading";
+
 export default function HomeRoute() {
   return (
-    <div className="h-full text-center">
-      <div className="mb-96">This is the home route</div>
+    <>
+      <section id="introduction">
+        <SectionHeading
+          title="About"
+          subtitle="This is the about section"
+          id="about"
+        />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-      <div id="about" className="mb-96">
-        This is the about section
-      </div>
-
-      <div id="contact">This is the contact section</div>
-    </div>
+        <SectionHeading
+          title="Contact"
+          subtitle="I'd love to hear from you!"
+          id="contact"
+        />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </section>
+    </>
   );
 }

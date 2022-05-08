@@ -1,7 +1,17 @@
+import type { MetaFunction } from "remix";
+import SectionHeading from "~/components/SectionHeading";
+
+export const meta: MetaFunction = () => {
+  return { title: "COMMISSIONS | Ashleigh Fraser Artist" };
+};
+
 export default function CommissionsRoute() {
   return (
-    <div className="h-full text-center">
-      <div className="mb-96">This is the commissions route</div>
-    </div>
+    <section id="commissions">
+      <SectionHeading
+        title="Commisssions"
+        subtitle="This is the commissions section"
+      />
+    </section>
   );
 }

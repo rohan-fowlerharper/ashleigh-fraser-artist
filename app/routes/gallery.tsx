@@ -1,7 +1,14 @@
+import type { MetaFunction } from "remix";
+import SectionHeading from "~/components/SectionHeading";
+
+export const meta: MetaFunction = () => {
+  return { title: "GALLERY | Ashleigh Fraser Artist" };
+};
+
 export default function GalleryRoute() {
   return (
-    <div className="h-full text-center">
-      <div className="mb-96">This is the gallery route</div>
-    </div>
+    <section id="gallery">
+      <SectionHeading title="Gallery" subtitle="This is the gallery section" />
+    </section>
   );
 }

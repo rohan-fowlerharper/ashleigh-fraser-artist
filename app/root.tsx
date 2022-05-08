@@ -11,7 +11,7 @@ import Header from "~/components/Header";
 import styles from "./tailwind.css";
 
 export const meta: MetaFunction = () => {
-  return { title: "Ash Draws" };
+  return { title: "HOME | Ashleigh Fraser Artist" };
 };
 
 export const links: LinksFunction = () => {
@@ -58,7 +58,10 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <Outlet />
+        <main className="mx-2 h-full font-playfair md:container md:mx-auto">
+          <Outlet />
+        </main>
+
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

@@ -1,7 +1,17 @@
+import type { MetaFunction } from "remix";
+import SectionHeading from "~/components/SectionHeading";
+
+export const meta: MetaFunction = () => {
+  return { title: "PRICES | Ashleigh Fraser Artist" };
+};
+
 export default function PricesRoute() {
   return (
-    <div className="h-full text-center">
-      <div className="mb-96">This is the prices route</div>
-    </div>
+    <section id="prices-top">
+      <SectionHeading
+        title="Prices"
+        subtitle="This is the prices section you can say stuff about prices"
+      />
+    </section>
   );
 }
