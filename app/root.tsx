@@ -58,7 +58,7 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <main className="mx-2 h-full font-playfair md:container md:mx-auto">
+        <main className="h-full font-playfair">
           <Outlet />
         </main>
 

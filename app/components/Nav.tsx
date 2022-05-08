@@ -4,9 +4,9 @@ export default function Nav() {
   const links = [
     { label: "Home", link: "/" },
     { label: "About", link: "/#about", internal: true },
-    { label: "Gallery", link: "gallery" },
-    { label: "Commissions", link: "commissions" },
-    { label: "Prices", link: "prices" },
+    { label: "Gallery", link: "/gallery" },
+    { label: "Commissions", link: "/commissions" },
+    { label: "Prices", link: "/prices" },
     { label: "Contact", link: "/#contact", internal: true },
   ];
 
