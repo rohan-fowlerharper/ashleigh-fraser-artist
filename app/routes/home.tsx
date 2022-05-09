@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import SectionHeading from "~/components/SectionHeading";
 
 export default function HomeRoute() {

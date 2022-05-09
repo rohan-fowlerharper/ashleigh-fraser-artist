@@ -18,7 +18,9 @@ export default function SectionHeading({
             to={`#${id}`}
             className="pl-2 text-3xl font-medium opacity-0 transition-opacity before:content-['#'] hover:underline group-hover:opacity-100"
             title="Direct link to heading"
-          />
+          >
+            <span className="sr-only">Direct link to {title} heading</span>
+          </Link>
         )}
       </h2>
       {subtitle && <p className="text-md text-zinc-500">{subtitle}</p>}

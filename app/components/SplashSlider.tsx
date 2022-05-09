@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperInterface, SwiperOptions } from "swiper";
-import { Pagination, A11y, Autoplay } from "swiper";
+import type { SwiperOptions } from "swiper";
+import { Swiper as SwiperInterface, Pagination, A11y, Autoplay } from "swiper";
 
 const swiperParams: SwiperOptions = {
   slidesPerView: 1,

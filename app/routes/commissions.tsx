@@ -1,4 +1,5 @@
 import type { MetaFunction } from "remix";
+
 import SectionHeading from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {

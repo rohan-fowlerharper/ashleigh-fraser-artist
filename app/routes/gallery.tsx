@@ -1,7 +1,8 @@
-import type { MetaFunction } from "remix";
-import SectionHeading from "~/components/SectionHeading";
+import type { MetaFunction, LinksFunction } from "remix";
+
+// TODO: add section heading back
+// import SectionHeading from "~/components/SectionHeading";
 import SplashSlider from "~/components/SplashSlider";
-import type { LinksFunction } from "remix";
 
 import styles from "swiper/swiper-bundle.min.css";
 
