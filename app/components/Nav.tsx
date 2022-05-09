@@ -2,12 +2,16 @@ import { NavLink } from "remix";
 
 export default function Nav() {
   const links = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/#about", internal: true },
-    { label: "Gallery", link: "/gallery" },
-    { label: "Commissions", link: "/commissions" },
-    { label: "Prices", link: "/prices" },
-    { label: "Contact", link: "/#contact", internal: true },
+    { label: "Home", link: "/", isMobileLink: true },
+    { label: "About", link: "/#about", isMobileLink: false, isInternal: true },
+    { label: "Gallery", link: "/gallery", isMobileLink: true },
+    { label: "Commissions", link: "/commissions", isMobileLink: true },
+    {
+      label: "Contact",
+      link: "/#contact",
+      isMobileLink: true,
+      isInternal: true,
+    },
   ];
 
   return (
@@ -20,9 +24,9 @@ export default function Nav() {
               to={link.link}
               className={({ isActive }) => {
                 return `text-md rounded-none py-2 px-3 text-center font-playfair text-zinc-600 duration-300 ease-out hover:bg-slate-100 hover:text-zinc-700 sm:text-lg md:text-xl ${
-                  link.internal ? "hidden sm:inline" : ""
+                  !link.isMobileLink ? "hidden sm:inline" : ""
                 } ${
-                  isActive && !link.internal
+                  isActive && !link.isInternal
                     ? "underline underline-offset-8"
                     : ""
                 }`;
