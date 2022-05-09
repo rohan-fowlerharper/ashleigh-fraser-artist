@@ -19,7 +19,7 @@
     "/api/_build"
   ],
   "dependencies": {
-    "@headlessui/react": "^1.4.3",
+    "@headlessui/react": "^1.6.1",
     "@remix-run/react": "^1.1.3",
     "@remix-run/serve": "^1.1.3",
     "@remix-run/vercel": "^1.1.3",
