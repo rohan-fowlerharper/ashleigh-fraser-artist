@@ -1,3 +1,4 @@
 app/tailwind.css
 .cache
-build/*
+*/build/*
+*/_build/*
