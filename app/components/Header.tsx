@@ -7,7 +7,7 @@ export default function Header() {
       <header>
         <Title />
       </header>
-      <div className="sticky top-0 z-20 bg-white shadow-md md:shadow-lg md:shadow-zinc-400">
+      <div className="sticky top-0 z-20 bg-white shadow-md  shadow-zinc-700/50 md:shadow-lg md:shadow-zinc-700/50">
         <Nav />
       </div>
     </>

@@ -11,7 +11,10 @@ export default function SectionHeading({
 }) {
   return (
     <div className="mb-6">
-      <h2 id={id} className="group right-4 text-3xl font-medium text-zinc-700">
+      <h2
+        id={id}
+        className="group right-4 scroll-mt-24 text-3xl font-medium text-zinc-700"
+      >
         {title}
         {id && (
           <Link
