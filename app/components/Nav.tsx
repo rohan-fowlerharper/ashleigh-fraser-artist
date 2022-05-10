@@ -15,7 +15,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="pb-6 pt-3 sm:py-6">
+    <nav className="py-6">
       <ul className="flex justify-center sm:gap-6 md:gap-8">
         {links.map((link) => (
           <li key={link.label}>
