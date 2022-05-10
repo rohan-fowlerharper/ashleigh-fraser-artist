@@ -4,17 +4,35 @@ import SplashSlider from "~/components/SplashSlider";
 export default function HomeRoute() {
   return (
     <section>
-      <div className="z-0 my-auto mb-6 flex h-72 justify-center bg-slate-100 text-center">
-        <h1 className="max-w-2xl self-center text-3xl font-bold tracking-widest text-zinc-700">
-          Welcome to my site, it is currently under construction, so please do
-          let me know if you experience any issues.
+      <div className="z-0 my-auto mb-6 flex h-32 justify-center bg-slate-100 text-center">
+        <h1 className="max-w-2xl self-center text-sm font-medium tracking-widest text-zinc-700 sm:text-base">
+          Thanks for visiting my website! It is currently under construction,
+          please come back soon. Email me at{" "}
+          <a
+            className="hover:underline"
+            href="mailto:ashleighfraser.artist@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ashleighfraser.artist@gmail.com
+          </a>{" "}
+          and check out my Instagram at{" "}
+          <a
+            className="hover:underline"
+            href="https://www.instagram.com/ashleighfraser_art/"
+          >
+            @ashleighfraser_art
+          </a>{" "}
         </h1>
       </div>
       <div className="mb-6 w-full bg-zinc-100 py-6">
         <SplashSlider />
       </div>
 
-      <section id="introduction" className="mx-2 md:container">
+      <section
+        id="introduction"
+        className="container mx-2 max-w-5xl md:mx-auto"
+      >
         <SectionHeading title="About Me" id="about" />
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="mb-6 text-zinc-700 lg:w-1/2">
