@@ -18,32 +18,30 @@ SwiperInterface.use([Pagination, A11y, Autoplay]);
 
 export default function SplashSlider() {
   return (
-    <div className="w-full bg-zinc-100 py-6">
-      <div className="mx-auto flex h-[40rem] max-w-4xl justify-center">
-        <div className="w-1/2 bg-zinc-50 p-8 text-center">
-          <p className="h-full text-[1.8vw] font-medium text-zinc-600">
-            My hand drawn, bespoke commission process starts with your own
-            photo. I transform the photo into an outline, then gradually build
-            up detail onto the paper. The finished portrait is a tribute to your
-            pet to treasure for a lifetime.
-          </p>
-        </div>
-        <div className="w-1/2 overflow-hidden">
-          <Swiper {...swiperParams}>
-            <SwiperSlide>
-              <div className="h-[40rem] bg-amber-700"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-[40rem] bg-blue-700"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-[40rem] bg-green-700"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-[40rem] bg-yellow-700"></div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
+    <div className="mx-auto flex max-h-96 max-w-4xl flex-col md:max-h-full md:flex-row">
+      <div className="aspect-[3/4] h-auto bg-zinc-50 p-8 text-center md:w-1/2">
+        <p className=" h-full text-3xl font-medium text-zinc-600 md:leading-[2.75rem] lg:text-[2.4rem]">
+          My hand drawn, bespoke commission process starts with your own photo.
+          I transform the photo into an outline, then gradually build up detail
+          onto the paper. The finished portrait is a tribute to your pet to
+          treasure for a lifetime.
+        </p>
+      </div>
+      <div className="md:w-1/2">
+        <Swiper {...swiperParams}>
+          <SwiperSlide>
+            <div className="aspect-[3/4] h-auto w-full bg-slate-500"></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="aspect-[3/4] h-auto w-full bg-gray-600"></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="aspect-[3/4] h-auto w-full bg-slate-700"></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="aspect-[3/4] h-auto w-full bg-zinc-700"></div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

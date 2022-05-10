@@ -1,14 +1,7 @@
-import type { MetaFunction, LinksFunction } from "remix";
+import type { MetaFunction } from "remix";
 
 // TODO: add section heading back
-// import SectionHeading from "~/components/SectionHeading";
-import SplashSlider from "~/components/SplashSlider";
-
-import styles from "swiper/swiper-bundle.min.css";
-
-export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
-};
+import SectionHeading from "~/components/SectionHeading";
 
 export const meta: MetaFunction = () => {
   return { title: "GALLERY | Ashleigh Fraser Artist" };
@@ -16,10 +9,8 @@ export const meta: MetaFunction = () => {
 
 export default function GalleryRoute() {
   return (
-    <section id="gallery">
-      {/* <SectionHeading title="Gallery" subtitle="This is the gallery section" /> */}
-      <br />
-      <SplashSlider />
+    <section id="gallery" className="mx-2 pt-6 md:container">
+      <SectionHeading title="Gallery" subtitle="This is the gallery section" />
     </section>
   );
 }
