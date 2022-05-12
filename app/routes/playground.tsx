@@ -1,11 +1,15 @@
 import { useState } from "react";
+import type { PetPortraitInterface } from "~/interfaces/PetPortrait";
 import PetImageModal from "~/components/PetImageModal";
 
-const pet = {
-  name: "Fluffy",
+const pet: PetPortraitInterface = {
+  title: "Fluffy",
   image: "https://placekitten.com/200/300",
-  description: "Fluffy is a cat.",
   altText: "Graphite A4 portrait of Fluffy",
+  dimensions: "A4",
+  medium: "Graphite Pencil",
+  surface: "Fabriano Academia Drawing Paper, 200gsm",
+  date: new Date(2020, 0, 1),
 };
 
 export default function PlaygroundPage() {

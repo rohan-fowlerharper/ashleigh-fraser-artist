@@ -1,5 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
+import type { PetPortraitInterface } from "~/interfaces/PetPortrait";
 
 export default function PetImageModal({
   isOpen,
@@ -8,18 +9,21 @@ export default function PetImageModal({
 }: {
   isOpen: boolean;
   onClose: () => void;
-  pet: {
-    name: string;
-    image: string;
-    altText: string;
-    description?: string;
-  };
+  pet: PetPortraitInterface;
 }) {
+  const dateString = useMemo(() => {
+    const dateObj = pet.date && new Date(pet.date);
+    return dateObj?.toLocaleDateString("en-GB", {
+      month: "short",
+      year: "numeric",
+    });
+  }, [pet.date]);
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-10 font-playfair"
+        className="relative z-50 font-playfair"
         onClose={onClose}
       >
         <Transition.Child
@@ -49,28 +53,41 @@ export default function PetImageModal({
                 <div className="flex items-center justify-between">
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl font-medium leading-6 text-zinc-900"
+                    className="text-2xl font-medium uppercase tracking-wider text-zinc-800"
                   >
-                    {pet.name}
+                    {pet?.title}
                   </Dialog.Title>
                   <button
                     onClick={onClose}
-                    className="text-md rounded-none py-2 px-3 text-center font-playfair text-zinc-600 duration-300 ease-out hover:bg-slate-100 hover:text-zinc-700 sm:text-lg md:text-xl"
+                    className="rounded-none py-2 px-3 text-center font-playfair text-2xl text-zinc-600 duration-300 ease-out hover:bg-slate-100 hover:text-zinc-700 sm:text-lg md:text-xl"
+                    aria-label="close"
                   >
                     X
                   </button>
                 </div>
 
-                <div className="mt-2">
+                <div className="mt-2 flex flex-col md:flex-row">
                   <img
                     src={pet.image}
                     alt={pet.altText}
                     className="min-h-[300px] md:min-h-[500px]"
                   />
-                </div>
-
-                <div className="mt-2">
-                  <p className="text-sm text-gray-500">{pet.description}</p>
+                  <div className="mt-4 md:ml-4 md:mt-0">
+                    <h4 className="text-sm uppercase text-zinc-500">Medium</h4>
+                    <p>{pet.medium}</p>
+                    <h4 className="mt-4 text-sm uppercase text-zinc-500">
+                      Dimensions
+                    </h4>
+                    <p>{pet.dimensions}</p>
+                    <h4 className="mt-4 text-sm uppercase text-zinc-500">
+                      Surface
+                    </h4>
+                    <p>{pet.surface}</p>
+                    <h4 className="mt-4 text-sm uppercase text-zinc-500">
+                      Year
+                    </h4>
+                    <p>{dateString !== undefined ? dateString : "no date"}</p>
+                  </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
