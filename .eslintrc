@@ -10,10 +10,5 @@
     "@remix-run/eslint-config/node",
     "prettier"
   ],
-  "ignorePatterns": [
-    "/node_modules",
-    "/build",
-    "/public/build",
-    "/api"
-  ]
+  "ignorePatterns": ["/node_modules", "/build", "/public/build", "/api"]
 }
