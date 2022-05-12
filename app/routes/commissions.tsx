@@ -1,6 +1,7 @@
 import type { MetaFunction } from "remix";
 
 import SectionHeading from "~/components/SectionHeading";
+import SectionLayout from "~/layout/SectionLayout";
 
 export const meta: MetaFunction = () => {
   return { title: "COMMISSIONS | Ashleigh Fraser Artist" };
@@ -8,11 +9,11 @@ export const meta: MetaFunction = () => {
 
 export default function CommissionsRoute() {
   return (
-    <section id="commissions">
+    <SectionLayout id="commissions">
       <SectionHeading
         title="Commisssions"
         subtitle="This is the commissions section"
       />
-    </section>
+    </SectionLayout>
   );
 }

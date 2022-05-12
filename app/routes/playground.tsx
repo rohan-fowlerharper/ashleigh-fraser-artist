@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { PetPortraitInterface } from "~/interfaces/PetPortrait";
 import PetImageModal from "~/components/PetImageModal";
+import SectionLayout from "~/layout/SectionLayout";
 
 const pet: PetPortraitInterface = {
   title: "Fluffy",
@@ -18,7 +19,7 @@ export default function PlaygroundPage() {
   const closeModal = () => setIsOpen(false);
 
   return (
-    <section id="playground">
+    <SectionLayout id="playground">
       <h1>Playground</h1>
       <p>This is a playground page.</p>
       <img
@@ -28,6 +29,6 @@ export default function PlaygroundPage() {
         className="cursor-pointer"
       />
       <PetImageModal isOpen={isOpen} onClose={closeModal} pet={pet} />
-    </section>
+    </SectionLayout>
   );
 }

@@ -1,9 +1,10 @@
 import SectionHeading from "~/components/SectionHeading";
 import SplashSlider from "~/components/SplashSlider";
+import SectionLayout from "~/layout/SectionLayout";
 
 export default function HomeRoute() {
   return (
-    <section>
+    <div>
       <div className="z-0 my-auto mb-6 flex h-32 justify-center bg-slate-100 text-center">
         <h1 className="max-w-2xl self-center text-sm font-medium tracking-widest text-zinc-700 sm:text-base">
           Thanks for visiting my website! It is currently under construction,
@@ -25,14 +26,11 @@ export default function HomeRoute() {
           </a>{" "}
         </h1>
       </div>
-      <div className="mb-6 w-full bg-zinc-100 py-6">
+      <div className="w-full bg-zinc-100 py-6">
         <SplashSlider />
       </div>
 
-      <section
-        id="introduction"
-        className="max-w-screen container px-2 md:mx-auto md:max-w-5xl"
-      >
+      <SectionLayout id="introduction">
         <SectionHeading title="About Me" id="about" />
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="mb-6 text-zinc-700 lg:w-1/2">
@@ -83,7 +81,7 @@ export default function HomeRoute() {
         <br />
         <br />
         <br />
-      </section>
-    </section>
+      </SectionLayout>
+    </div>
   );
 }

@@ -6,6 +6,7 @@ import SectionHeading from "~/components/SectionHeading";
 import type { PetPortraitInterface } from "~/interfaces/PetPortrait";
 import PetImageModal from "~/components/PetImageModal";
 import { useState } from "react";
+import SectionLayout from "~/layout/SectionLayout";
 
 export const meta: MetaFunction = () => {
   return { title: "GALLERY | Ashleigh Fraser Artist" };
@@ -34,10 +35,7 @@ export default function GalleryRoute() {
   };
 
   return (
-    <section
-      id="gallery"
-      className="max-w-screen container mt-6 px-2 md:mx-auto md:max-w-5xl"
-    >
+    <SectionLayout id="gallery">
       <SectionHeading title="Gallery" subtitle="This is the gallery section" />
       <div className="-m-1 flex flex-row flex-wrap">
         {galleryData.map((pet) => (
@@ -61,6 +59,6 @@ export default function GalleryRoute() {
           isOpen={modalIsOpen}
         />
       )}
-    </section>
+    </SectionLayout>
   );
 }
