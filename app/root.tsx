@@ -5,13 +5,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "remix";
-import type { MetaFunction, LinksFunction } from "remix";
+} from "@remix-run/react";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import Header from "~/components/Header";
 import styles from "./tailwind.css";
 
 export const meta: MetaFunction = () => {
-  return { title: "HOME | Ashleigh Fraser Artist" };
+  return {
+    title: "HOME | Ashleigh Fraser Artist",
+    charset: "utf-8",
+    viewport: "width=device-width, initial-scale=1",
+  };
 };
 
 export const links: LinksFunction = () => {
@@ -48,11 +52,10 @@ export const links: LinksFunction = () => {
 };
 
 export default function App() {
+  console.log(process.env.NODE_ENV);
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>

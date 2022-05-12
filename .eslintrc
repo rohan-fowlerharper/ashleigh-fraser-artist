@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "@remix-run/eslint-config",
+    "@remix-run/eslint-config/node",
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "/node_modules",
+    "/build",
+    "/public/build",
+    "/api"
+  ]
+}

@@ -1,5 +1,5 @@
-import type { LoaderFunction, MetaFunction } from "remix";
-import { useLoaderData } from "remix";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { data } from "~/features/gallery/data";
 
 import SectionHeading from "~/components/SectionHeading";

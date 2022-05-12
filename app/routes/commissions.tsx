@@ -1,4 +1,4 @@
-import type { MetaFunction } from "remix";
+import type { MetaFunction } from "@remix-run/node";
 
 import SectionHeading from "~/components/SectionHeading";
 import SectionLayout from "~/layout/SectionLayout";
