@@ -1,10 +1,29 @@
+import { createStandaloneToast } from "@chakra-ui/toast";
 import SectionHeading from "~/components/SectionHeading";
 import SplashSlider from "~/components/SplashSlider";
+import ToastPopover from "~/components/ToastPopover";
+
 import SectionLayout from "~/layout/SectionLayout";
 
 export default function HomeRoute() {
+  const { toast, ToastContainer } = createStandaloneToast();
+
+  const displaySuccessToast = () =>
+    toast({
+      position: "bottom-right",
+      duration: 4000,
+      render: ({ onClose }) => (
+        <ToastPopover
+          onClose={onClose}
+          title="Pristine!"
+          description="Thanks for your email, I'll get back to you as soon as I can!"
+        />
+      ),
+    });
+
   return (
     <div>
+      <ToastContainer />
       <div className="z-0 my-auto mb-6 flex h-32 justify-center bg-slate-100 text-center">
         <h1 className="max-w-2xl self-center text-sm font-medium tracking-widest text-zinc-700 sm:text-base">
           Thanks for visiting my website! It is currently under construction,
@@ -76,6 +95,12 @@ export default function HomeRoute() {
           subtitle="I'd love to hear from you!"
           id="contact"
         />
+        <button
+          onClick={displaySuccessToast}
+          className="text-md rounded-none bg-slate-100 py-2 px-3 text-center font-playfair text-zinc-600 duration-300 ease-out hover:bg-slate-300 hover:text-zinc-700 md:text-lg"
+        >
+          Display success message
+        </button>
         <br />
         <br />
         <br />

@@ -52,7 +52,6 @@ export const links: LinksFunction = () => {
 };
 
 export default function App() {
-  console.log(process.env.NODE_ENV);
   return (
     <html lang="en" className="scroll-smooth">
       <head>
