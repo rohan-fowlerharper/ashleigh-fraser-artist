@@ -1,5 +1,5 @@
 import type { ActionFunction, LinksFunction } from "@remix-run/node";
-import { redirect, json } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import SectionHeading from "~/components/SectionHeading";
 import SplashSlider from "~/components/SplashSlider";
 
