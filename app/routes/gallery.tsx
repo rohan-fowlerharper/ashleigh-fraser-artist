@@ -9,7 +9,11 @@ import { useState } from "react";
 import SectionLayout from "~/layout/SectionLayout";
 
 export const meta: MetaFunction = () => {
-  return { title: "GALLERY | Ashleigh Fraser Artist" };
+  return {
+    title: "GALLERY | Ashleigh Fraser Artist",
+    description:
+      "A small collection of my bespoke pet and equine portraits. Perfect for your home or as a gift.",
+  };
 };
 
 export const loader: LoaderFunction = () => {

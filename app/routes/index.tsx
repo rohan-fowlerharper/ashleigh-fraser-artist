@@ -1,4 +1,8 @@
-import type { ActionFunction, LinksFunction } from "@remix-run/node";
+import type {
+  ActionFunction,
+  LinksFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import { json } from "@remix-run/node";
 import SectionHeading from "~/components/SectionHeading";
 import SplashSlider from "~/components/SplashSlider";
@@ -7,6 +11,13 @@ import SectionLayout from "~/layout/SectionLayout";
 import ContactForm from "~/components/ContactForm";
 
 import swiperStyles from "swiper/swiper-bundle.min.css";
+
+export const meta: MetaFunction = () => {
+  return {
+    description:
+      "Based in New Zealand, purchase bespoke pet and equine portraits by Ashleigh Fraser. Perfect as a gift or for your home.",
+  };
+};
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: swiperStyles }];
