@@ -48,6 +48,7 @@ export default function ContactForm() {
                 type="text"
                 name="name"
                 id="name"
+                placeholder="Your name"
                 className="focus:inset- w-full border-2 border-zinc-500 px-3 py-2 duration-150"
               />
             </div>
@@ -71,7 +72,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               id="message"
-              placeholder=""
+              placeholder="How can I help?"
               rows={5}
               className="w-full border-2 border-zinc-500 px-3 py-2 duration-300"
             />
@@ -79,7 +80,7 @@ export default function ContactForm() {
           <div className="mb-6">
             <button
               type="submit"
-              className={`w-full bg-zinc-500 px-3 py-2 text-zinc-100 duration-200 hover:bg-zinc-700 ${
+              className={`w-full bg-zinc-500 px-3 py-2 text-zinc-50 duration-200 hover:bg-zinc-700 ${
                 isAdding ? "cursor-not-allowed opacity-50" : ""
               }`}
               disabled={isAdding}
